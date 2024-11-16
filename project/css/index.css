@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #052440;
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+}
+
+.left {
+    background-color: #0a2540;
+    width: 40%;
+    position: relative;
+}
+
+.left::before, .left::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #6db3f2, #1e3c72);
+}
+
+.left::before {
+    width: 250px; /* Increased size */
+    height: 250px; /* Increased size */
+    top: 30px; /* Adjusted positioning */
+    left: -60px; /* Adjusted positioning */
+}
+
+.left::after {
+    width: 350px; /* Increased size */
+    height: 350px; /* Increased size */
+    bottom: 30px; /* Adjusted positioning */
+    right: 130px; /* Adjusted positioning */
+}
+
+.middle {
+    position: relative; /* Position relative for the circle inside */
+    height: 100%; /* Full height */
+    background-color: transparent; /* Background can be transparent or any color */
+}
+
+.middle::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #6db3f2, #1e3c72);
+    width: 450px; /* Size of the middle circle */
+    height: 450px; /* Size of the middle circle */
+    top: 34%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-66%, -50%); /* Adjust for centering */
+}
+
+.right {
+    background-color: #ffffff; /* White background */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* Increased padding */
+    border-top-left-radius: 40px; 
+    border-bottom-left-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.logo {
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
+    text-align: center; /* Center the logo within the container */
+}
+
+.logo img {
+    width: 200px; /* Desired size */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 30px; /* Adjusted margin for more space below */
+    font-size: 36px; /* Increased font size */
+    color: #0a2540;
+    font-weight: bold; /* Added bold weight for emphasis */
+}
+
+.login-form {
+    width: 80%; /* Set a specific width for the form */
+    max-width: 500px; /* Optional: Limit the maximum width */ /* Add padding for more space inside the form */
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 0 auto; /* Center the form on the page */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px; /* Increased margin */
+    position: relative; /* Position relative to allow absolute positioning of icons */
+}
+
+.form-group input {
+    width: 100%; /* Full width of the form */
+    padding: 15px 15px 15px 40px; /* Increased padding on the left for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+}
+
+.form-group i {
+    position: absolute; /* Position the icon absolutely */
+    left: 15px; /* Position the icon on the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+    color: #0a2540;
+    font-size: 18px; /* Increased icon size */
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Increased font size */
+    color: #0a2540;
+}
+
+.form-options a {
+    font-size: 16px; /* Increased font size */
+    color: #0a2540;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 70%; /* Full width */
+    padding: 10px; /* Increased padding for height */
+    background-color: #0a2540;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    border-radius: 100px;
+    margin: 0 auto; /* Center horizontally */
+    display: block;
+}
+
+.btn:hover {
+    background-color: #082135; /* Darker shade on hover */
+}
+
+.signup {
+    text-align: center;
+    margin-top: 30px; /* Increased margin */
+    font-size: 16px; /* Increased font size */
+    color: #0a2540;
+    padding-bottom: 70px;
+}
+
+.signup a {
+    color: #0a2540;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red; /* Style for error messages */
+    margin-top: 10px; /* Spacing above error messages */
+    font-size: 14px; /* Font size for error messages */
+}
+
+.success-message {
+    color: green; /* Change to your desired color */
+}
